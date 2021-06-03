@@ -1,3 +1,4 @@
+import 'package:dicoding_project/pages/asia_page.dart';
 import 'package:dicoding_project/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ void main() {
 
     routes: {
       '/':(context)=> HomePage(),
+      '/asia':(context)=> AsiaPage(),
     },
   ));
 }

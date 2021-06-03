@@ -1,3 +1,4 @@
+import 'package:dicoding_project/pages/asia_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget{
@@ -29,6 +30,7 @@ class HomePage extends StatelessWidget{
                       Container(
                         width: 170,
                         child: RaisedButton(onPressed: (){
+                           Navigator.push(context, new MaterialPageRoute(builder: (context)=> new AsiaPage()));
                         },
                           child: Text("Asia"),
                         ),
