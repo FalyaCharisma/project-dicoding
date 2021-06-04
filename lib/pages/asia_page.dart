@@ -41,16 +41,21 @@ class AsiaPage extends StatelessWidget{
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     final item = items[index];
-                    return Card(
-                      child: Container(
-                        margin: EdgeInsets.all(8),
-                        child: Row(
-                          children: [
-                            Expanded(child: Text(item.nama, textAlign: TextAlign.center)),
-        Expanded(child: Image.network(item.bendera, width: 50, height: 30,)),
-                            Expanded(child: Text(item.ibuKota, textAlign: TextAlign.center,)),
-                          Expanded(child: Text(item.mataUang, textAlign: TextAlign.center,)),
-                          ],
+                    return InkWell(
+                      onTap: (){
+                      
+                      },
+                      child: Card(
+                        child: Container(
+                          margin: EdgeInsets.all(8),
+                          child: Row(
+                            children: [
+                              Expanded(child: Text(item.nama, textAlign: TextAlign.center)),
+                              Expanded(child: Image.network(item.bendera, width: 50, height: 30,)),
+                              Expanded(child: Text(item.ibuKota, textAlign: TextAlign.center,)),
+                              Expanded(child: Text(item.mataUang, textAlign: TextAlign.center,)),
+                            ],
+                          ),
                         ),
                       ),
                     );
