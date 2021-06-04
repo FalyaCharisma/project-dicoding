@@ -1,4 +1,5 @@
 import 'package:dicoding_project/models/asia.dart';
+import 'package:dicoding_project/pages/negara_page.dart';
 import 'package:flutter/material.dart';
 
 class AsiaPage extends StatelessWidget{
@@ -40,31 +41,35 @@ class AsiaPage extends StatelessWidget{
                   padding: EdgeInsets.all(8),
                   itemCount: items.length,
                   itemBuilder: (context, index) {
-                    final item = items[index];
+                    final asia = items[index];
                     return InkWell(
                       onTap: (){
-                      
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return NegaraPage(itemArgs: asia);
+                        // settings: RouteSettings(
+                        //   arguments: asia),
+                        }));
                       },
                       child: Card(
                         child: Container(
                           margin: EdgeInsets.all(8),
                           child: Row(
                             children: [
-                              Expanded(child: Text(item.nama, textAlign: TextAlign.center)),
-                              Expanded(child: Image.network(item.bendera, width: 50, height: 30,)),
-                              Expanded(child: Text(item.ibuKota, textAlign: TextAlign.center,)),
-                              Expanded(child: Text(item.mataUang, textAlign: TextAlign.center,)),
+                              Expanded(child: Text(asia.nama, textAlign: TextAlign.center)),
+                              Expanded(child: Image.network(asia.bendera, width: 50, height: 30,)),
+                              Expanded(child: Text(asia.ibuKota, textAlign: TextAlign.center,)),
+                              Expanded(child: Text(asia.mataUang, textAlign: TextAlign.center,)),
                             ],
                           ),
                         ),
                       ),
                     );
                   }
-                  )
+                )
               ),
            ],
           ),
-          ),     
-      );
+        ),     
+    );
   }
 }

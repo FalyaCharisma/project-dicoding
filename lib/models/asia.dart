@@ -4,5 +4,5 @@ class Asia{
   String ibuKota;
   String mataUang;
 
-  Asia({required this.nama, required this.bendera, required this.ibuKota, required this.mataUang});
+  Asia({required this.nama, required this.bendera,required this.ibuKota,required this.mataUang});
 }
