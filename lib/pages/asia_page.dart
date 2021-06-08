@@ -4,7 +4,16 @@ import 'package:flutter/material.dart';
 
 class AsiaPage extends StatelessWidget{
   final List<Asia> items = [
-    Asia(nama: 'Indonesia', bendera: 'https://image.flaticon.com/icons/png/512/2151/2151329.png', ibuKota: 'Jakarta', mataUang: 'Rupiah')
+    Asia(nama: 'Indonesia', bendera: 'https://image.flaticon.com/icons/png/512/2151/2151329.png', ibuKota: 'Jakarta', mataUang: 'Rupiah'),
+    Asia(nama: 'Malaysia', bendera: 'https://image.flaticon.com/icons/png/512/555/555623.png', ibuKota: 'Kuala Lumpur', mataUang: 'Ringgit'),
+    Asia(nama: 'Singapura', bendera: 'https://image.flaticon.com/icons/png/512/555/555538.png', ibuKota: 'Singapura', mataUang: 'Dollar Singapura'),
+    Asia(nama: 'Thailand', bendera: 'https://image.flaticon.com/icons/png/512/555/555495.png', ibuKota: 'Bangkok', mataUang: 'Bath'),
+    Asia(nama: 'Korea Selatan', bendera: 'https://image.flaticon.com/icons/png/512/330/330591.png', ibuKota: 'Seoul', mataUang: 'Won'),
+    Asia(nama: 'Jepang', bendera: 'https://image.flaticon.com/icons/png/512/555/555646.png', ibuKota: 'Tokyo', mataUang: 'Yen'),
+    Asia(nama: 'China', bendera: 'https://image.flaticon.com/icons/png/512/2151/2151303.png', ibuKota: 'Tiongkok', mataUang: 'Yuan'),
+    Asia(nama: 'Filipina', bendera: 'https://image.flaticon.com/icons/png/512/555/555603.png', ibuKota: 'Manila', mataUang: 'Peso'),
+    Asia(nama: 'Myanmar', bendera: 'https://image.flaticon.com/icons/png/512/555/555651.png', ibuKota: 'Burma', mataUang: 'Kyat'),
+
   ];
 
   @override 
@@ -13,10 +22,16 @@ class AsiaPage extends StatelessWidget{
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData( 
-      primarySwatch: Colors.green,
+      primarySwatch: Colors.grey,
       ),
       home: Scaffold(
         appBar: AppBar(
+          leading: new IconButton(
+            icon: new Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.pop(context);
+            },
+          ),
           title: Text("List Negara"),
           ),
           body: Column(
@@ -24,14 +39,14 @@ class AsiaPage extends StatelessWidget{
               Container(
                 margin: EdgeInsets.fromLTRB(8, 8, 8, 0),
                 height: 30,
-                color: Colors.green,
+                color: Colors.grey,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("Negara"),
-                    Text("Bendera"),
-                    Text("Ibu kota"),
-                    Text("Mata Uang")
+                    Text("  Negara", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
+                    Text("  Bendera", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
+                    Text("  Ibu kota", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
+                    Text("  Mata Uang", style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15))
                   ],
                 ),
               ),
@@ -46,8 +61,6 @@ class AsiaPage extends StatelessWidget{
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context){
                         return NegaraPage(itemArgs: asia);
-                        // settings: RouteSettings(
-                        //   arguments: asia),
                         }));
                       },
                       child: Card(
@@ -69,7 +82,8 @@ class AsiaPage extends StatelessWidget{
               ),
            ],
           ),
-        ),     
+        ),
+   //   ),     
     );
   }
 }

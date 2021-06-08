@@ -65,49 +65,47 @@ class _KonversiState extends State<KonversiPage> {
               children: [
                 Image.network("https://cdn.moneysmart.id/wp-content/uploads/2018/07/29020013/WP-35.jpeg"),
                 TextFormField(
-                       decoration: 
-                       InputDecoration(hintText: "Masukkan nominal (dalam Rupiah)"),
-                       inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                       keyboardType: TextInputType.numberWithOptions(decimal:true),
-                        controller: inputJumlah,
-                       ),
-                      DropdownButton<String>(
-                         items:
-                         listMenu.map((String value){
-                           return DropdownMenuItem<String>(
-                             value: value,
-                             child: Text(value)
-                           ,);
-                         }).toList(),
-                         value: _newValue,
-                         onChanged: (changeValue){
-                           setState((){
-                             _newValue = changeValue!;
-                             _hitungMataUang();
-                           });
-                         },
-                       ),
-                    
-                     Container(
-                       width: double.infinity,
-                       child: RaisedButton(
-                         onPressed: _hitungMataUang,
-                         child: Text("Cek nilai konversi!"),
-                       ),
-                     ),
-                     Row(
-                       mainAxisAlignment: MainAxisAlignment.center,
-                       children:[
-                         Text("Hasil konversi adalah ", style: TextStyle(fontSize: 20),),
-                         Text(_outputKonversi.toStringAsFixed(1), style: TextStyle(fontSize: 20),)
-                       ],
-                     ),
+                  decoration: 
+                    InputDecoration(hintText: "Masukkan nominal (dalam Rupiah)"),
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    keyboardType: TextInputType.numberWithOptions(decimal:true),
+                    controller: inputJumlah,
+                ),
+                DropdownButton<String>(
+                  items:
+                    listMenu.map((String value){
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value)
+                      );
+                    }).toList(),
+                    value: _newValue,
+                    onChanged: (changeValue){
+                      setState((){
+                        _newValue = changeValue!;
+                        _hitungMataUang();
+                      });
+                    },
+                ),    
+                Container(
+                  width: double.infinity,
+                  child: RaisedButton(
+                    onPressed: _hitungMataUang,
+                    child: Text("Cek nilai konversi!"),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    Text("Hasil konversi adalah ", style: TextStyle(fontSize: 20),),
+                    Text(_outputKonversi.toStringAsFixed(1), style: TextStyle(fontSize: 20),)
                   ],
                 ),
-           )
+              ],
+            ),
           )
+        )
       )
     );
-  }
-   
+  }   
 }

@@ -9,10 +9,10 @@ class NegaraPage extends StatelessWidget{
   @override 
   Widget build(BuildContext context){
     
-     return MaterialApp(
-     title: 'Flutter Demo',
+    return MaterialApp(
+      title: 'Flutter Demo',
       theme: ThemeData( 
-      primarySwatch: Colors.green,
+      primarySwatch: Colors.grey,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       
@@ -24,7 +24,7 @@ class NegaraPage extends StatelessWidget{
               Navigator.pop(context);
             },
           ),
-          title: Text("List Negara"),
+          title: Text("Negara " + itemArgs.nama),
           ),
           body: Container(
             padding: EdgeInsets.all(8),

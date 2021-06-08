@@ -29,7 +29,7 @@ class SeputarAsiaPage extends StatelessWidget{
                   Container(
                     color: Colors.grey,
                     child: Row(children: [
-                      Text("Benua ASIA", style: TextStyle(fontSize: 20))
+                      Text("Benua Asia", style: TextStyle(fontSize: 24))
                     ]),
                   ),
                   Text("Asia adalah benua terbesar di bumi yang berbatasan dengan Pegunungan Ural dan Kaukasus serta Samudra Arktika, Pasifik, dan Hindia. Benua ini mencakup 8,7% dari total luas permukaan bumi dan terdiri dari 30% dari luas daratannya. " +
@@ -38,7 +38,7 @@ class SeputarAsiaPage extends StatelessWidget{
                   +"Beberapa bentang alam yang sering dipakai untuk memisahkan kedua benua tersebut adalah Selat Dardanella, Laut Marmara, Selat Bosporus, Laut Hitam, Pegunungan Kaukasus, Laut Kaspia, Sungai Ural (atau Sungai Emba), dan Pegunungan Ural hingga Novaya Zemlya. "
                   +"Selain berbatasan langsung dengan Benua Eropa, Benua Asia juga memiliki batas langsung dengan Benua Afrika yang memiliki perbatasan darat dan bertemu di sekitar Terusan Suez. Mengingat ukuran dan keragamannya, konsep Asia – nama tersebut kembali ke zaman klasik – yang sebenarnya mungkin lebih berkaitan dengan geografi manusia daripada geografi fisik. "
                   +"Asia sangat beragam dan di dalam masing-masing wilayahnya terdapat kelompok-kelompok etnis, budaya, lingkungan, ekonomi, hubungan sejarah dan sistem pemerintahan.",
-                  style: TextStyle(fontSize: 12)),
+                  style: TextStyle(fontSize: 16)),
                 ],
               ),
             ),

@@ -1,4 +1,7 @@
+import 'package:dicoding_project/pages/about_asia_page.dart';
 import 'package:dicoding_project/pages/asia_page.dart';
+import 'package:dicoding_project/pages/galeri.dart';
+import 'package:dicoding_project/pages/konversi_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -56,16 +59,16 @@ class HomePage extends StatelessWidget {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => AsiaPage()));
+                              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SeputarAsiaPage()));
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: Column(
                                   children: <Widget>[
                                     Spacer(),
-                                    Image.network("https://cdn3.vectorstock.com/i/1000x1000/65/47/colorful-map-asia-continent-vector-33236547.jpg"),
+                                    Image.network("https://www.pngkey.com/png/detail/367-3678643_asia-pacific-graphic-south-east-asia-map-icon.png", scale: 0.1),
                                     Spacer(),
-                                    Text("Daftar Negara",textAlign: TextAlign.center),
+                                    Text("Seputar Asia",textAlign: TextAlign.center),
                                   ],
                                 ),
                               ),
@@ -90,7 +93,7 @@ class HomePage extends StatelessWidget {
                                 child: Column(
                                   children: <Widget>[
                                     Spacer(),
-                                    Image.network("https://cdn3.vectorstock.com/i/1000x1000/65/47/colorful-map-asia-continent-vector-33236547.jpg"),
+                                    Image.network("https://cdn0.iconfinder.com/data/iconsets/previews/medium-2x/asia-flag-icons-hexagon-flat-design.png", scale: 0.1),
                                     Spacer(),
                                     Text("Daftar Negara",textAlign: TextAlign.center),
                                   ],
@@ -110,16 +113,16 @@ class HomePage extends StatelessWidget {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => AsiaPage()));
+                              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => KonversiPage()));
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: Column(
                                   children: <Widget>[
                                     Spacer(),
-                                    Image.network("https://cdn3.vectorstock.com/i/1000x1000/65/47/colorful-map-asia-continent-vector-33236547.jpg"),
+                                    Image.network("https://cdn0.iconfinder.com/data/icons/finance-141/33/currency_converter-512.png", scale: 0.1),
                                     Spacer(),
-                                    Text("Daftar Negara",textAlign: TextAlign.center),
+                                    Text("Konversi Mata Uang",textAlign: TextAlign.center),
                                   ],
                                 ),
                               ),
@@ -137,16 +140,16 @@ class HomePage extends StatelessWidget {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => AsiaPage()));
+                              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => GaleriPage()));
                               },
                               child: Padding(
                                 padding: const EdgeInsets.all(20.0),
                                 child: Column(
                                   children: <Widget>[
                                     Spacer(),
-                                    Image.network("https://cdn3.vectorstock.com/i/1000x1000/65/47/colorful-map-asia-continent-vector-33236547.jpg"),
+                                    Image.network("https://icons.iconarchive.com/icons/icondesigner.net/hyperion/256/Sidebar-Photos-icon.png", scale: 0.1),
                                     Spacer(),
-                                    Text("Daftar Negara",textAlign: TextAlign.center),
+                                    Text("Galery",textAlign: TextAlign.center),
                                   ],
                                 ),
                               ),
